@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+.menu-topo {
+  display: grid;
+  background-color: #d62828;
+  grid-template-columns: 1fr auto;
+  padding: 0 50px;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.lista-menu-topo {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  place-items: center;
+  gap: 10px;
+}
+
+.lista-menu-topo ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 5px;
+}
+
+.lista-menu-topo a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.5s;
+}
+
+.lista-menu-topo a:hover {
+  color: #ffba08;
+}
+
+.lista-menu-topo img {
+  max-width: 40px;
+}
+
+#logo {
+  max-width: 60px;
+  padding: 5px 10px;
+}
+
+.amarelo a {
+  color: #ffba08;
+}
+
+.under-effect {
+  display: inline-block;
+}
+
+.under-effect::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #ffba08;
+  transition: 300ms;
+}
+
+.under-effect:hover::after {
+  width: 100%;
+}
+
+#apresentacao {
+  background-color: #ffffc7;
+}
+
+h1 {
+  margin: 0;
+}
