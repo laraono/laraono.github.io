@@ -159,6 +159,11 @@ img:hover {
   gap: 50px;
 }
 
+.icon-skill {
+  width: 50px;
+  padding: 10px 5px;
+}
+
 #dev {
   grid-column: 1/3;
 }
