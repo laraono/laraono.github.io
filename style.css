@@ -168,6 +168,32 @@ img:hover {
   grid-column: 1/3;
 }
 
-#gerencia {
+#design {
   grid-column: 1/4;
+}
+
+#projetos {
+  background-color: #ffffc7;
+  padding: 100px 100px;
+  margin: 0;
+}
+
+.projeto {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.projeto a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffc7;
+  padding: 15px;
+  background-color: #003049;
+  border-radius: 22px;
+}
+
+.projeto img {
+  width: 450px;
 }
