@@ -92,7 +92,7 @@
         </div>
     </section>
     <section aria-label="Skills" id="skills">
-        <h1>Tecnologias que utilizo</h1>
+        <h1 class="star-title">a TECNoLoGiAS QUE USo a</h1>
         <div class="grid-skills">
             <div class="skill" id="dev">
                 <h2>Desenvolvimento</h2>
@@ -163,14 +163,16 @@
         </div>
     </section>
     <section aria-label="Projetos" id="projetos">
+        <h1 class="star-title">a Projetos a</h1>
         <div>
             <div class="projeto">
                 <img src="img/MagoZine.png" alt="MagoZine">
                 <div>
-                    <p>Portal de Jogo</p>
-                    <h1>FlappyPombo</h1>
-                    <p>Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</p>
-                    <a href="">Código</a>
+                    <p class="subtitle">Revista Digital</p>
+                    <h1>MagoZine</h1>
+                    <p>O Mago Zine é dedicado ao uso das tecnologias digitais para comunicar-se de forma criativa. Este é um acervo de reflexões, inspirações e materiais que promovem a experimentação de uma internet mais criativa. Utiliza HTML5 e CSS3 puro. </p>
+                    <a class="dark-btn" href="">Código</a>
+                    <a class="light-btn" href="https://mago-zine.neocities.org/">Acesse</a>
                 </div>
             </div>
         </div>
@@ -183,17 +185,22 @@
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
         let open = 0;
         function openNav(array) {
-            if (open) {
+            if ((open - 1) === array) {
                 closeNav(open - 1);
+            } else {
+                if (open) {
+                    closeNav(open - 1);
+                }
+                sidenav = document.getElementsByClassName("sidenav");
+                sidenav[array].style.width = "50%";
+                open = array + 1;
             }
-            sidenav = document.getElementsByClassName("sidenav");
-            sidenav[array].style.width = "50%";
-            open = array + 1;
         }
 
         /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
         function closeNav(array) {
             sidenav[array].style.width = "0";
+            open = 0;
         } 
     </script>
 </body>
