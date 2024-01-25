@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 73px 0 0 0;
   padding: 0;
@@ -60,6 +63,18 @@ nav {
   color: #ffba08;
 }
 
+.subtitle {
+  color: #36454f;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+
+#mais-detalhes {
+  color: #003049;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
 .under-effect {
   display: inline-block;
 }
@@ -69,8 +84,15 @@ nav {
   width: 0px;
   height: 2px;
   display: block;
-  background: #ffba08;
   transition: 300ms;
+}
+
+.lista-menu-topo .under-effect::after {
+  background: #ffba08;
+}
+
+.lista-detalhes .under-effect::after {
+  background: #003049;
 }
 
 .under-effect:hover::after {
@@ -109,6 +131,14 @@ p {
   left: 200px;
   rotate: 40deg;
 }
+
+#flower {
+  width: 250px;
+  position: absolute;
+  bottom: -70px;
+  right: -20px;
+  rotate: 20deg;
+}
 img:hover {
   rotate: 10deg;
 }
@@ -131,7 +161,6 @@ img:hover {
   border-bottom: 1px solid #003049;
   padding: 5px 0;
 }
-
 .lista-detalhes img {
   width: 40px;
 }
@@ -157,6 +186,7 @@ img:hover {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 50px;
+  position: relative;
 }
 
 .icon-skill {
@@ -196,4 +226,93 @@ img:hover {
 
 .projeto img {
   width: 450px;
+}
+
+/* Tooltip das skills */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 48, 73, 0.8); /* Black*/
+  backdrop-filter: blur(6px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.content-sidenav {
+  color: #ffffc7;
+  padding: 0 50px;
+}
+
+.sidenav .subtitle {
+  color: #ffffc7;
 }

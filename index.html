@@ -31,25 +31,58 @@
             <div>
                 <div>
                     <h1>Lara Ono Reis</h1>
-                    <p>Desenvolvedora Full-Stack e Web Designer</p>
-                    <p>O futuro que eu quero utiliza a tecnologia para contribuir com os avanços da humanidade e suas relações com o mundo.</p>
+                    <p class="subtitle">Desenvolvedora Full-Stack e Web Designer</p>
+                    <p>O futuro que eu quero utiliza a tecnologia para <b>contribuir com os avanços da humanidade</b> e suas relações com o mundo.</p>
                 </div>
                 <div id="detalhes">
-                    <p>Mais detalhes:</p>
-                    <ul>
-                        <li class="lista-detalhes">
-                            <img src="img/book.png" alt="">
-                            <p>Experiência acadêmica</p>
-                        </li>
-                        <li class="lista-detalhes">
-                            <img src="img/suitcase.png" alt="">
-                            <p>Experiência profissional</p>
-                        </li>
-                        <li class="lista-detalhes">
-                            <img src="img/badge.png" alt="">
-                            <p>Prêmios</p>
-                        </li>
-                    </ul>
+                    <p id="mais-detalhes">Mais detalhes:</p>
+                    <div class="lista-detalhes">
+                        <img src="img/book.png" alt="">
+                        <p class="under-effect" onclick="openNav(0)">Experiência acadêmica</p>
+                    </div>
+                    <div class="lista-detalhes">
+                        <img src="img/suitcase.png" alt="">
+                        <p class="under-effect" onclick="openNav(1)">Experiência profissional</p>
+                    </div>
+                    <div class="lista-detalhes">
+                        <img src="img/badge.png" alt="">
+                        <p class="under-effect" onclick="openNav(2)">Prêmios</p>
+                    </div>
+                </div>
+                <div class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav(0)">&times;</a>
+                    <div class="content-sidenav">
+                        <h2>Experiência acadêmica</h2>
+                        <hr>
+                        <ul>
+                            <li>
+                                <p>Tecnólogo em Análise e Desenvolvimento de Sistemas - UFPR</p>
+                                <p class="subtitle">2023-2025</p>
+                            </li>
+                            <li>
+                                <p>Técnico em Petróleo e Gás - UFPR</p>
+                                <p class="subtitle">2019-2022</p>
+                            </li>
+                        </ul>
+                        <h3>Cursos complementares</h3>
+                        <ul>
+                            <li>
+                                <p>Bootstrap 5</p>
+                                <p class="subtitle">Origamid</p>
+                            </li>
+                            <li>
+                                <p>HTML Avançado</p>
+                                <p class="subtitle">Fundação Bradesco</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav(1)">&times;</a>
+                </div>
+                <div class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav(2)">&times;</a>
+                    <a href="#">oiii</a>
                 </div>
             </div>
             <div id="colagem">
@@ -63,27 +96,70 @@
         <div class="grid-skills">
             <div class="skill" id="dev">
                 <h2>Desenvolvimento</h2>
-                <img class="icon-skill" src="img/skills/bootstrap.png" alt="Bootstrap">
-                <img class="icon-skill" src="img/skills/php.png" alt="PHP">
-                <img class="icon-skill" src="img/skills/js.png" alt="JavaScript">
-                <img class="icon-skill" src="img/skills/letter-c.png" alt="C">
-                <img class="icon-skill" src="img/skills/linux.png" alt="Linux">
-                <img class="icon-skill" src="img/skills/css-3.png" alt="CSS">
-                <img class="icon-skill" src="img/skills/html-5.png" alt="HTML">
-                <img class="icon-skill" src="img/skills/Git-Icon-1788C.png" alt="Git">
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/bootstrap.png" alt="Bootstrap">
+                    <span class="tooltiptext">Bootstrap 5</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/php.png" alt="PHP">
+                    <span class="tooltiptext">PHP</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/js.png" alt="JavaScript">
+                    <span class="tooltiptext">JavaScript</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/letter-c.png" alt="C">
+                    <span class="tooltiptext">C</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/linux.png" alt="Linux">
+                    <span class="tooltiptext">Linux</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/css-3.png" alt="CSS">
+                    <span class="tooltiptext">CSS</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/html-5.png" alt="HTML">
+                    <span class="tooltiptext">HTML</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/Git-Icon-1788C.png" alt="Git">
+                    <span class="tooltiptext">Git</span>
+                </div>
             </div>
             <div class="skill" id="gerencia">
                 <h2>Gerenciamento</h2>
-                <img class="icon-skill" src="img/skills/google_300221.png" alt="Google Workspace">
-                <img class="icon-skill" src="img/skills/office_732222.png" alt="Pacote Office">
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/google_300221.png" alt="Google Workspace">
+                    <span class="tooltiptext">Google Workspace</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/office_732222.png" alt="Pacote Office">
+                    <span class="tooltiptext">Pacote Office</span>
+                </div>
             </div>
             <div class="skill" id="design">
                 <h2>Design</h2>
-                <img class="icon-skill" src="img/skills/figma.png" alt="Figma">
-                <img class="icon-skill" src="img/skills/Canva-Logo-PNG.png" alt="Canva">
-                <img class="icon-skill" src="img/skills/photoshop_5968520.png" alt="Photoshop">
-                <img class="icon-skill" src="img/skills/Calligrakrita-base.svg.png" alt="Krita">
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/figma.png" alt="Figma">
+                    <span class="tooltiptext">Figma</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/Canva-Logo-PNG.png" alt="Canva">
+                    <span class="tooltiptext">Canva</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/photoshop_5968520.png" alt="Photoshop">
+                    <span class="tooltiptext">Photoshop</span>
+                </div>
+                <div class="tooltip">
+                    <img class="icon-skill" src="img/skills/Calligrakrita-base.svg.png" alt="Krita">
+                    <span class="tooltiptext">Krita</span>
+                </div>
             </div>
+            <img id="flower" src="img/shape.png" alt="">
         </div>
     </section>
     <section aria-label="Projetos" id="projetos">
@@ -102,6 +178,24 @@
     <section id="contato" aria-label="Contato">
 
     </section>
+
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        let open = 0;
+        function openNav(array) {
+            if (open) {
+                closeNav(open - 1);
+            }
+            sidenav = document.getElementsByClassName("sidenav");
+            sidenav[array].style.width = "50%";
+            open = array + 1;
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav(array) {
+            sidenav[array].style.width = "0";
+        } 
+    </script>
 </body>
 
 </html>
