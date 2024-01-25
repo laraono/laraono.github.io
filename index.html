@@ -92,7 +92,7 @@
         </div>
     </section>
     <section aria-label="Skills" id="skills">
-        <h1 class="star-title">a TECNoLoGiAS QUE USo a</h1>
+        <h1 class="star-title">a TECNoLoGiAS a</h1>
         <div class="grid-skills">
             <div class="skill" id="dev">
                 <h2>Desenvolvimento</h2>
@@ -192,14 +192,14 @@
                     closeNav(open - 1);
                 }
                 sidenav = document.getElementsByClassName("sidenav");
-                sidenav[array].style.width = "50%";
+                sidenav[array].style.visibility = "visible";
                 open = array + 1;
             }
         }
 
         /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
         function closeNav(array) {
-            sidenav[array].style.width = "0";
+            sidenav[array].style.visibility = "hidden";
             open = 0;
         } 
     </script>

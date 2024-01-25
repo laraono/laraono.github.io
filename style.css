@@ -6,6 +6,7 @@ html {
   src: url(Starborn.ttf);
   /* Via: https://www.dafont.com/pt/starborn.font */
 }
+
 body {
   margin: 73px 0 0 0;
   padding: 0;
@@ -33,12 +34,17 @@ nav {
 }
 
 .lista-menu-topo {
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  place-items: center;
-  gap: 10px;
+  visibility: collapse;
 }
-
+@media only screen and (min-width: 1000px) {
+  .lista-menu-topo {
+    visibility: visible;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+  }
+}
 .lista-menu-topo ul li {
   display: inline-block;
   list-style-type: none;
@@ -122,10 +128,14 @@ p {
 
 #grid-lara {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   justify-items: center;
+  grid-template-columns: 1fr;
 }
-
+@media only screen and (min-width: 1000px) {
+  #grid-lara {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 #avatar {
   width: 300px;
 }
@@ -142,12 +152,20 @@ p {
 }
 
 #flower {
-  width: 250px;
+  visibility: hidden;
   position: absolute;
-  bottom: -70px;
-  right: -20px;
-  rotate: 20deg;
 }
+@media only screen and (min-width: 1000px) {
+  #flower {
+    visibility: visible;
+    width: 250px;
+    position: absolute;
+    bottom: -70px;
+    right: -20px;
+    rotate: 20deg;
+  }
+}
+
 img:hover {
   rotate: 10deg;
 }
@@ -178,15 +196,26 @@ img:hover {
   background-color: #003049;
   color: #ffffc7;
   margin: 0;
-  padding: 100px 100px;
+  padding: 100px 50px;
 }
 
+@media only screen and (min-width: 1000px) {
+  #skills {
+    background-color: #003049;
+    color: #ffffc7;
+    margin: 0;
+    padding: 100px 100px;
+  }
+}
 .star-title {
   text-align: center;
   font-family: Starborn;
-  font-size: 60px;
 }
-
+@media only screen and (min-width: 1000px) {
+  .star-title {
+    font-size: 60px;
+  }
+}
 #projetos .star-title {
   padding-bottom: 25px;
   color: #003049;
@@ -195,27 +224,33 @@ img:hover {
 .skill {
   border: 1px solid #ffffc7;
   padding: 20px;
+  margin: 25px 0;
 }
 
-.grid-skills {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 50px;
-  position: relative;
-}
+@media only screen and (min-width: 1000px) {
+  .skill {
+    margin: 0;
+  }
+  .grid-skills {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    grid-template-columns: auto auto auto;
+    position: relative;
+  }
 
+  #dev {
+    grid-column: 1/3;
+  }
+
+  #design {
+    grid-column: 1/4;
+  }
+}
 .icon-skill {
   width: 50px;
   padding: 10px 5px;
-}
-
-#dev {
-  grid-column: 1/3;
-}
-
-#design {
-  grid-column: 1/4;
 }
 
 #projetos {
@@ -224,13 +259,14 @@ img:hover {
   margin: 0;
 }
 
-.projeto {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  gap: 20px;
+@media only screen and (min-width: 1000px) {
+  .projeto {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+  }
 }
-
 .dark-btn:hover,
 .light-btn {
   display: inline-block;
@@ -248,6 +284,7 @@ img:hover {
   display: inline-block;
   text-decoration: none;
   color: #ffffc7;
+  margin: 15px;
   padding: 10px;
   background-color: #003049;
   border: 1px solid #003049;
@@ -255,9 +292,14 @@ img:hover {
 }
 
 .projeto img {
-  width: 450px;
+  width: 100%;
 }
 
+@media only screen and (min-width: 1000px) {
+  .projeto img {
+    width: 450px;
+  }
+}
 /* Tooltip das skills */
 
 .tooltip {
@@ -301,8 +343,9 @@ img:hover {
 
 /* The side navigation menu */
 .sidenav {
+  visibility: hidden;
   height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  width: 100%; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
@@ -311,7 +354,13 @@ img:hover {
   backdrop-filter: blur(6px);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: opacity 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+@media only screen and (min-width: 1000px) {
+  .sidenav {
+    width: 250px;
+  }
 }
 
 /* The navigation menu links */
