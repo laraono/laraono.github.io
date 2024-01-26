@@ -14,7 +14,7 @@
         <div>
             <a href="/"><img id="logo" src="img/star.png" alt="Lara's portfolio"></a>
         </div>
-        <div class="lista-menu-topo">
+        <div class="lista-menu-topo" id="lista-topo">
             <ul>
                 <li class="amarelo under-effect"><a href="#apresentacao">A Lara!</a></li>
                 <li class="under-effect"><a href="#skills">Skills</a></li>
@@ -28,7 +28,7 @@
     <section aria-label="Apresentação" id="apresentacao">
 
         <div id="grid-lara">
-            <div>
+            <div id="descricao">
                 <div>
                     <h1>Lara Ono Reis</h1>
                     <p class="subtitle">Desenvolvedora Full-Stack e Web Designer</p>
@@ -201,6 +201,15 @@
         function closeNav(array) {
             sidenav[array].style.visibility = "hidden";
             open = 0;
+        }
+
+        function btnNav() {
+            var x = document.getElementById("lista-topo");
+            if (x.className === "lista-menu-topo") {
+                x.className += " responsive";
+            } else {
+                x.className = "lista-menu-topo";
+            }
         } 
     </script>
 </body>
