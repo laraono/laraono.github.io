@@ -360,9 +360,8 @@ img:hover {
 
 /* The side navigation menu */
 .sidenav {
-  visibility: hidden;
   height: 100%; /* 100% Full-height */
-  width: 100%; /* 0 width - change this with JavaScript */
+  width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
@@ -371,22 +370,21 @@ img:hover {
   backdrop-filter: blur(6px);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: opacity 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-@media only screen and (min-width: 1000px) {
+/* @media only screen and (min-width: 1000px) {
   .sidenav {
     width: 50%;
   }
-}
+}*/
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-weight: bold;
   color: #f1f1f1;
-  display: block;
+  display: inline;
   transition: 0.3s;
 }
 
@@ -411,4 +409,29 @@ img:hover {
 
 .sidenav .subtitle {
   color: #ffffc7;
+  padding-bottom: 0;
+}
+
+.sidenav li {
+  padding-bottom: 10px;
+}
+
+.expdetail {
+  font-weight: lighter;
+}
+
+.curriculo {
+  color: #d62828;
+  text-align: center;
+  text-decoration: none;
+  font-family: Starborn;
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 20px;
+  rotate: -5deg;
+  transition: 1s;
+}
+
+.curriculo:hover {
+  color: #ffba08;
 }
